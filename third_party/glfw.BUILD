@@ -61,6 +61,7 @@ DARWIN_DEFINES = [
     "_GLFW_NSGL",
     "_GLFW_NO_DLOAD_WINMM",
     "_GLFW_USE_OPENGL",
+    "GL_SILENCE_DEPRECATION", # It spams warnings without this
 ]
 
 DARWIN_HDRS = [
@@ -172,5 +173,4 @@ cc_library(
     }),
     strip_include_prefix = "include",
     visibility = ["//visibility:public"],
-    defines = ["GL_SILENCE_DEPRECATION"],
 )
